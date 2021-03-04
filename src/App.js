@@ -14,11 +14,9 @@ function App() {
     <>
       <Navbar />
       <Form onSubmit={submitHandler} />
-      <NotesList 
-        name="Pinned Notes"
+      <NotesList
         notes={listOfTasks.getPinnedTasks} />
       <NotesList 
-        name="Unpinned Notes"
         notes={listOfTasks.getUnpinnedTasks} />
     </>
   );

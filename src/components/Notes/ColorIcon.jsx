@@ -1,3 +1,5 @@
+import { observer } from "mobx-react-lite";
+
 function ColorIcon({color, setColor}) {
     return (
         <div 
@@ -7,4 +9,4 @@ function ColorIcon({color, setColor}) {
     )
 }
 
-export default ColorIcon
+export default observer(ColorIcon);

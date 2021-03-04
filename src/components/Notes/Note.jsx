@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 import Panel from "./Panel";
+import taskStore from "../../store/Task/TaskList";
 
 function Note({ note }) {
     const style = {
         backgroundColor: note.color
     };
-    console.log(style);
     return (
         <div className="flex flex-col border rounded-md pt-2 pl-3 w-68 m-1" style={style}>
             <div className="text-xl">
@@ -15,7 +15,10 @@ function Note({ note }) {
                 <p>{note.info}</p>
             </div>
             <div className="note-card-options">
-                <Panel setColor={(color) => note.changeColor(color)} />
+                <Panel 
+                    setColor={(color) => note.changeColor(color)}
+                    pinNote={() => note.togglePinned()}
+                    deleteNote={() => taskStore.deleteTask(note.id)} />
             </div>
         </div>
     )

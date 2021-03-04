@@ -1,4 +1,4 @@
-import { observable, computed, action, makeObservable, autorun } from "mobx";
+import { observable, computed, action, makeObservable } from "mobx";
 import Task from "./Task";
 
 export class TaskList {
@@ -13,7 +13,6 @@ export class TaskList {
             getUnpinnedTasks: computed,
             getPinnedTasks: computed
         });
-        autorun(() => console.log(this.color));
     }
 
     get getTotalCount() {

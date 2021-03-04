@@ -11,7 +11,7 @@ function Navbar() {
                 </div>
                 <div className="flex flex-row bg-gray-100 rounded-md text-center items-center mr-96 ml-96">
                     <input 
-                        className="h-12 p-4 w-96 bg-gray-100 rounded"
+                        className="h-12 p-4 w-96 bg-gray-100 rounded focus:border-none focus:outline-none"
                         type="text"
                         placeholder="Search" />
                     <img 
