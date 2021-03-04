@@ -1,13 +1,9 @@
 const colors = {
     default: "white",
-    orange: "orange",
-    green: "green",
-    teal: "teal",
-    darkred: "darkblue",
-    purple: "purple",
-    pink: "pink",
-    brown: "brown",
-    gray: "gray"
+    gray: "lightgray",
+    blue: "lightblue",
+    lime: "limegreen",
+    brown: "lightcoral"
 };
 
 export default colors;

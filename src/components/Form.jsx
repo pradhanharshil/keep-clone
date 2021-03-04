@@ -8,9 +8,10 @@ function Form({ onSubmit }) {
                 className="p-2 border w-full"
                 placeholder="info"/>
             <button 
-                className="p-2 bg-yellow-400"
+                className="bg-yellow-400 text-white rounded-full mt-1 mb-1 text-2xl bold h-8 w-8 text-center"
+                style={{backgroundColor: "#fbbc04"}}
                 type="submit"
-                children="submit" />
+                children="+" />
         </form>
     )
 }

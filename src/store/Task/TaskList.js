@@ -1,7 +1,7 @@
-import { observable, computed, action, makeObservable } from "mobx";
+import { observable, computed, action, makeObservable, autorun } from "mobx";
 import Task from "./Task";
 
-class TaskList {
+export class TaskList {
     tasks = [];
 
     constructor() {
@@ -9,12 +9,23 @@ class TaskList {
             tasks: observable,
             addTask: action,
             deleteTask: action,
-            getCount: computed
+            getTotalCount: computed,
+            getUnpinnedTasks: computed,
+            getPinnedTasks: computed
         });
+        autorun(() => console.log(this.color));
     }
 
-    get getCount() {
+    get getTotalCount() {
         return this.tasks.length;
+    }
+
+    get getUnpinnedTasks() {
+        return this.tasks.filter(task => !task.pinned);
+    }
+
+    get getPinnedTasks() {
+        return this.tasks.filter(task => task.pinned);
     }
 
     addTask(title, info) {
@@ -29,5 +40,5 @@ class TaskList {
     }
 }
 
-const taskStore = new TaskList();
-export default taskStore;
+const listOfTasks = new TaskList();
+export default listOfTasks;

@@ -12,6 +12,7 @@ class Task {
         makeObservable(this, {
             title: observable,
             info: observable,
+            color: observable,
             togglePinned: action,
             changeColor: action,
             editTask: action

@@ -1,20 +1,27 @@
+import { observer } from 'mobx-react-lite';
 import './App.css';
 import Form from './components/Form';
 import Navbar from "./components/Navbar";
 import NotesList from './components/Notes/NotesList';
+import listOfTasks from "./store/Task/TaskList";
 
 function App() {
   const submitHandler = e => {
     e.preventDefault();
-    taskStore.addTask(e.target[0].value, e.target[1].value);
+    listOfTasks.addTask(e.target[0].value, e.target[1].value);
   }
   return (
     <>
       <Navbar />
       <Form onSubmit={submitHandler} />
-      <NotesList  />
+      <NotesList 
+        name="Pinned Notes"
+        notes={listOfTasks.getPinnedTasks} />
+      <NotesList 
+        name="Unpinned Notes"
+        notes={listOfTasks.getUnpinnedTasks} />
     </>
   );
 }
 
-export default App;
+export default observer(App);
