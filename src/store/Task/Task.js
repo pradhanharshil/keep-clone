@@ -4,7 +4,7 @@ import colors from "../../constants/colors";
 class Task {
     title = "";
     info = "";
-    id = Math.random() * 10000;
+    id = parseInt((Math.random() * 10000).toFixed(0));
     pinned = false;
     color = "";
 

@@ -1,3 +1,5 @@
+import { observer } from "mobx-react-lite";
+
 function Form({ onSubmit }) {
     return (
         <form className="flex flex-col items-center ml-auto mr-auto mt-5 mb-5 w-96" onSubmit={onSubmit}>
@@ -16,4 +18,4 @@ function Form({ onSubmit }) {
     )
 }
 
-export default Form;
+export default observer(Form);
