@@ -13,6 +13,7 @@ class Task {
             title: observable,
             info: observable,
             color: observable,
+            pinned: observable,
             togglePinned: action,
             changeColor: action,
             editTask: action
