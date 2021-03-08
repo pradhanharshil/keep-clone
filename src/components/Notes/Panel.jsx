@@ -11,7 +11,7 @@ function Panel({ setColor, pinNote, deleteNote, isPinned }) {
         <div className="flex flex-row m-1">
             <Icon src={isPinned ? unpin : pin} clickHandler={pinNote} height="5" width="5" />
             <Icon src={trash} clickHandler={deleteNote} height="5" width="5" />
-            {Object.values(colors).map(key => <ColorIcon key={key} color={key} setColor={setColor} />)}
+            {Object.values(colors).map(key => <ColorIcon key={key} height="5" width="5" color={key} handler={setColor} />)}
         </div>
     );
 }

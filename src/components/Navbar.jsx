@@ -1,10 +1,12 @@
 import keep from "../assets/icons/keep.png";
 import search from "../assets/icons/search.webp";
+import colors from "../constants/colors";
+import ColorIcon from "./Notes/ColorIcon";
 
 function Navbar() {
     return (
         <nav className="flex flex-row h-16 w-full justify-between items-center shadow-md">
-            <div className="flex flex-row items-center p-1 w-full">
+            <div className="flex flex-row items-center justify-around p-1 w-full">
                 <div className="flex flex-row flex-shrink-0 items-center p-1 h-full">
                     <img className="h-12 w-12" src={keep} alt="Keep" />
                     <p className="text-2xl m-0">Keep</p>
@@ -19,8 +21,14 @@ function Navbar() {
                         src={search}
                         alt="Search"/>
                 </div>
-                <div className="nav-options"></div>
-                <div className="nav-user"></div>
+                <div className="nav-user">
+                    <ColorIcon 
+                        color="darkred"
+                        height="9"
+                        width="9"
+                        handler={() => console.log("User")} 
+                        children="H"/>
+                </div>
             </div>
         </nav>
     );
