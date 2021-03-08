@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 
-function Icon({ src, clickHandler }) {
+function Icon({ src, clickHandler, height, width }) {
     return (
         <div
-            className="rounded-full h-5 w-5 cursor-pointer m-1"
+            className={`rounded-full h-${height} w-${width} cursor-pointer m-1`}
             style={{
-                backgroundImage: `url(${src})`,
+                background: `url(${src})`,
                 backgroundSize: "100% 100%",
                 backgroundRepeat: "no-repeat"
             }}

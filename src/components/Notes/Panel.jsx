@@ -8,8 +8,8 @@ import { observer } from "mobx-react-lite";
 function Panel({ setColor, pinNote, deleteNote }) {
     return (
         <div className="flex flex-row m-1">
-            <Icon src={pin} clickHandler={pinNote} />
-            <Icon src={trash} clickHandler={deleteNote} />
+            <Icon src={pin} clickHandler={pinNote} height="5" width="5" />
+            <Icon src={trash} clickHandler={deleteNote} height="5" width="5" />
             {Object.values(colors).map(key => <ColorIcon key={key} color={key} setColor={setColor} />)}
         </div>
     );
