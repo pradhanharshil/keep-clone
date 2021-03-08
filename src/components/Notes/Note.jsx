@@ -16,6 +16,7 @@ function Note({ note }) {
             </div>
             <div className="note-card-options">
                 <Panel 
+                    isPinned={note.pinned}
                     setColor={(color) => note.changeColor(color)}
                     pinNote={() => note.togglePinned()}
                     deleteNote={() => taskStore.deleteTask(note.id)} />
