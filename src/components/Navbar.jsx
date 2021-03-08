@@ -25,7 +25,6 @@ function Navbar() {
                         color="darkred"
                         height="9"
                         width="9"
-                        handler={() => {}}
                         children="H" />
                 </div>
             </div>

@@ -10,7 +10,7 @@ function ColorIcon({ color, handler, height, width, children }) {
                 textAlign: "center",
                 paddingTop: "0.3rem"
             }}
-            onClick={() => handler(color)}
+            onClick={handler ? () => handler(color) : null}
             children={children} />
     )
 }
