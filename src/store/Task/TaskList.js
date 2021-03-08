@@ -11,7 +11,8 @@ export class TaskList {
             deleteTask: action,
             getTotalCount: computed,
             getUnpinnedTasks: computed,
-            getPinnedTasks: computed
+            getPinnedTasks: computed,
+            filterTasks: action
         });
     }
 
@@ -40,6 +41,14 @@ export class TaskList {
         if (index > -1) {
             this.tasks.splice(index, 1);
         }
+    }
+
+    filterTasks(query) {
+        const regex = new RegExp(query, "i");
+        const result = this.tasks.filter(task => regex.test(task.title));
+        const pinned = result.filter(task => task.pinned);
+        const unpinned = result.filter(task => !task.pinned);
+        return {pinned, unpinned};
     }
 }
 

@@ -1,4 +1,4 @@
-import { observer } from "mobx-react-lite";
+import {memo} from "react";
 
 function Form({ onSubmit }) {
     return (
@@ -18,4 +18,4 @@ function Form({ onSubmit }) {
     )
 }
 
-export default observer(Form);
+export default memo(Form);

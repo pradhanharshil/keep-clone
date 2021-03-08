@@ -5,7 +5,7 @@ function Icon({ src, clickHandler, height, width }) {
         <div
             className={`rounded-full h-${height} w-${width} cursor-pointer m-1`}
             style={{
-                background: `url(${src})`,
+                backgroundImage: `url(${src})`,
                 backgroundSize: "100% 100%",
                 backgroundRepeat: "no-repeat"
             }}

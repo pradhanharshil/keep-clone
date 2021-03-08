@@ -2,7 +2,7 @@ import keep from "../assets/icons/keep.png";
 import search from "../assets/icons/search.webp";
 import ColorIcon from "./Notes/ColorIcon";
 
-function Navbar() {
+function Navbar({ onChange }) {
     return (
         <nav className="flex flex-row h-16 w-full justify-between items-center shadow-md">
             <div className="flex flex-row items-center justify-around p-1 w-full">
@@ -14,7 +14,8 @@ function Navbar() {
                     <input
                         className="h-12 p-4 w-96 bg-gray-100 rounded focus:border-none focus:outline-none"
                         type="text"
-                        placeholder="Search" />
+                        placeholder="Search"
+                        onChange={onChange} />
                     <img
                         className="cursor-pointer h-6 w-6 m-1 mr-2"
                         src={search}

@@ -7,6 +7,7 @@ class Task {
     id = parseInt((Math.random() * 10000).toFixed(0));
     pinned = false;
     color = "";
+    @observable name = "";
 
     constructor(title, info) {
         makeObservable(this, {
