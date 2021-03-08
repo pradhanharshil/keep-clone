@@ -28,7 +28,11 @@ export class TaskList {
     }
 
     addTask(title, info) {
+        if (title === "" || info === "") {
+            alert("Required field missing");
+        } else {
         this.tasks.push(new Task(title, info));
+        }
     }
 
     deleteTask(id) {
