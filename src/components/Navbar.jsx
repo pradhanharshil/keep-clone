@@ -1,6 +1,5 @@
 import keep from "../assets/icons/keep.png";
 import search from "../assets/icons/search.webp";
-import colors from "../constants/colors";
 import ColorIcon from "./Notes/ColorIcon";
 
 function Navbar() {
@@ -12,22 +11,22 @@ function Navbar() {
                     <p className="text-2xl m-0">Keep</p>
                 </div>
                 <div className="flex flex-row bg-gray-100 rounded-md text-center items-center mr-96 ml-96">
-                    <input 
+                    <input
                         className="h-12 p-4 w-96 bg-gray-100 rounded focus:border-none focus:outline-none"
                         type="text"
                         placeholder="Search" />
-                    <img 
+                    <img
                         className="cursor-pointer h-6 w-6 m-1 mr-2"
                         src={search}
-                        alt="Search"/>
+                        alt="Search" />
                 </div>
                 <div className="nav-user">
-                    <ColorIcon 
+                    <ColorIcon
                         color="darkred"
                         height="9"
                         width="9"
-                        handler={() => console.log("User")} 
-                        children="H"/>
+                        handler={() => {}}
+                        children="H" />
                 </div>
             </div>
         </nav>
