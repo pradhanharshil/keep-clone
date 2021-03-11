@@ -1,31 +1,26 @@
 import keep from "../assets/icons/keep.png";
-import search from "../assets/icons/search.webp";
 import ColorIcon from "./Notes/ColorIcon";
 
 function Navbar({ onChange }) {
     return (
-        <nav className="flex flex-row h-16 w-full justify-between items-center shadow-md">
-            <div className="flex flex-row items-center justify-around p-1 w-full">
-                <div className="flex flex-row flex-shrink-0 items-center p-1 h-full">
-                    <img className="h-12 w-12" src={keep} alt="Keep" />
-                    <p className="text-2xl m-0">Keep</p>
+        <nav className="flex flex-row h-16 w-full items-center shadow-md">
+            <div className="flex flex-row items-center justify-between h-4/5 w-full mr-2 ml-2 md:mr-4 md:ml-4">
+                <div className="flex flex-row justify-center items-center">
+                    <img className="h-10 w-10 md:h-12 md:w-12" src={keep} alt="Keep" />
+                    <p className="text-xl md:text-2xl">Keep</p>
                 </div>
-                <div className="flex flex-row bg-gray-100 rounded-md text-center items-center mr-96 ml-96">
+                <div>
                     <input
-                        className="h-12 p-4 w-96 bg-gray-100 rounded focus:border-none focus:outline-none"
+                        className="h-11 p-2 w-48 bg-gray-100 rounded focus:border-none focus:outline-none md:w-80 lg:w-88"
                         type="text"
                         placeholder="Search"
                         onChange={onChange} />
-                    <img
-                        className="cursor-pointer h-6 w-6 m-1 mr-2"
-                        src={search}
-                        alt="Search" />
                 </div>
-                <div className="nav-user">
+                <div className="flex flex-row items-center">
                     <ColorIcon
                         color="darkred"
-                        height="9"
-                        width="9"
+                        height="8"
+                        width="8"
                         children="H" />
                 </div>
             </div>

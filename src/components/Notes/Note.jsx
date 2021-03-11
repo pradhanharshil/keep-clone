@@ -7,7 +7,7 @@ function Note({ note }) {
         backgroundColor: note.color
     };
     return (
-        <div className="flex flex-col border rounded-md pt-2 pl-3 w-68 m-1" style={style}>
+        <div className="flex flex-col border rounded-md pt-2 pl-3 m-1 h-max pt-3 pl-3 w-9/12 md:w-full" style={style}>
             <div className="text-xl">
                 <h3>{note.title}</h3>
             </div>
