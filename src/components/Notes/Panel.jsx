@@ -7,7 +7,7 @@ import trash from "../../assets/icons/trash.png";
 import edit from "../../assets/icons/edit.png";
 import { observer } from "mobx-react-lite";
 
-function Panel({ setColor, pinNote, deleteNote, isPinned, editNote }) {
+function Panel({ setColor, pinNote, deleteNote, isPinned, editNote = null }) {
     return (
         <div className="flex flex-row m-1">
             <Icon src={isPinned ? unpin : pin} clickHandler={pinNote} height="5" width="5" />

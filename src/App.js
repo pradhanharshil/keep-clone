@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import {useState} from "react";
+import { useState } from "react";
 import './App.css';
 import Form from './components/Form';
 import Navbar from "./components/Navbar";
@@ -12,12 +12,14 @@ function App() {
   const submitHandler = e => {
     e.preventDefault();
     listOfTasks.addTask(e.target[0].value, e.target[1].value);
+    e.target[0].value = "";
+    e.target[1].value = "";
   }
   return (
     <>
-      <Navbar 
-        onChange={(e) => setInput(e.target.value)}/>
-      <Form 
+      <Navbar
+        onChange={(e) => setInput(e.target.value)} />
+      <Form
         onSubmit={submitHandler} />
       <NotesList
         notes={listOfTasks}
